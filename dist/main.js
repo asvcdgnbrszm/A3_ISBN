@@ -1,0 +1,1 @@
+(()=>{var t={495:t=>{t.exports={test:function(t){return t},checkISBN:function(){alert("checkISBN")}}}},e={};function r(n){var c=e[n];if(void 0!==c)return c.exports;var o=e[n]={exports:{}};return t[n](o,o.exports,r),o.exports}(()=>{const{checkISBN:t}=r(495);document.getElementById("btnStart").addEventListener("click",(()=>{t()}))})()})();
