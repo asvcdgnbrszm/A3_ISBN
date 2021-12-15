@@ -7,7 +7,7 @@ trigger.addEventListener('click', () => {
     //const isbnString = document.querySelector("#inputIsbn").value;
     const outDiv = document.querySelector('#outDiv');
 
-    result = checkISBN('1111111112',2);
+    result = checkISBN('100000000X');
 
     if (result) { 
         outDiv.innerHTML = 'Die ISBN-Nummer ist korrekt.'

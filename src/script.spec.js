@@ -1,7 +1,7 @@
-const { test } = require('./script.js')
+const { calculateISBNChecksum } = require('./script.js')
 
-describe('test', () => {
-    it('should work', () => {
-        expect(test(true)).toBe(true);
+describe('calculateISBNChecksum', () => {
+    it('should return 1', () => {
+        expect(calculateISBNChecksum('1000000001')).toBe('1');
     })
 });
