@@ -9,6 +9,10 @@ function calculateISBNChecksum (isbnString) {
 
     checksum %= 11;
 
+    if (checksum === 10) {
+        return 'X';
+    }
+
     return ''+checksum+'';
 }
 
