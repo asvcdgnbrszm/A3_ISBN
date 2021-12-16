@@ -19,4 +19,13 @@ describe('checkISBN', () => {
     it('should return true', () => {
         expect(checkISBN('000700009x')).toBe(true);
     })
+    it('should return true', () => {
+        expect(checkISBN('0100000002')).toBe(true);
+    })
+    it('should return true', () => {
+        expect(checkISBN('0004000005')).toBe(true);
+    })
+    it('should return false', () => {
+        expect(checkISBN('0100000003')).toBe(false);
+    })
 });
