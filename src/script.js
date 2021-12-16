@@ -18,12 +18,21 @@ function calculateISBNChecksum (isbnString) {
 
 function checkISBN (isbnString) {
 
-    let checksum = isbnString[9];
+    const allowedChars = ['0','1','2','3','4','5','6','7','8','9','x','X'];
 
-    if (checksum === calculateISBNChecksum(isbnString)) {
-        return true;
+    
+    if (isbnString.length === 10) {
+        isbnString.split('').forEach(digit => {
+            if (allowedChars.indexOf(digit) === -1) {
+                return false;
+            }
+        });
+        let checksum = isbnString[9];
+
+        if (checksum === calculateISBNChecksum(isbnString)) {
+            return true;
+        }
     }
-
     return false;
 }
 
