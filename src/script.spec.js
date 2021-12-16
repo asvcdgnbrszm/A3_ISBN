@@ -16,4 +16,7 @@ describe('checkISBN', () => {
     it('should return true', () => {
         expect(checkISBN('000700009X')).toBe(true);
     })
+    it('should return true', () => {
+        expect(checkISBN('000700009x')).toBe(true);
+    })
 });

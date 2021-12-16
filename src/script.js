@@ -29,6 +29,9 @@ function checkISBN (isbnString) {
         });
         let checksum = isbnString[9];
 
+        if (checksum == 'x') {
+            checksum = 'X'
+        }
         if (checksum === calculateISBNChecksum(isbnString)) {
             return true;
         }
