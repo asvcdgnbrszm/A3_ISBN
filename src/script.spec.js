@@ -28,4 +28,13 @@ describe('checkISBN', () => {
     it('should return false', () => {
         expect(checkISBN('0100000003')).toBe(false);
     })
+    it('should return false because 11 digits', () => {
+        expect(checkISBN('01000000031')).toBe(false);
+    })
+    it('should return false because 9 digits', () => {
+        expect(checkISBN('010000002')).toBe(false);
+    })
+    it('should return false because string contains wrong digit', () => {
+        expect(checkISBN('010a00002')).toBe(false);
+    })
 });
